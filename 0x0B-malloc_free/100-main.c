@@ -16,7 +16,7 @@
  *
  *     */
 
-int main(void)
+int main(int ac, char *av[])
 
 {
 
@@ -24,19 +24,17 @@ int main(void)
 
 
 
-	        s = str_concat("Betty ", "Holberton");
+	        s = argstostr(ac, av);
 
 		    if (s == NULL)
 
 			        {
 
-					        printf("failed\n");
+					        return (1);
 
-						        return (1);
+						    }
 
-							    }
-
-		        printf("%s\n", s);
+		        printf("%s", s);
 
 			    free(s);
 
